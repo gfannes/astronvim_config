@@ -81,5 +81,12 @@ return {
     --     ["~/%.config/foo/.*"] = "fooscript",
     --   },
     -- }
+
+    -- Don't know how to configure the pocco81/auto-save.nvim plugin to _only_ save on focus lost
+    vim.api.nvim_create_autocmd("FocusLost", {
+      pattern = "*",
+      command = "silent! wall",
+    })
+
   end,
 }

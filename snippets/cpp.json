@@ -1,0 +1,18 @@
+{
+  "mss": {
+    "prefix": ["mss"],
+    "body": [
+      "MSS($1);"
+    ],
+    "description": "MSS()"
+  },
+  "mss_scope": {
+    "prefix": ["msb"],
+    "body": [
+      "MSS_BEGIN(${1:bool});",
+      "MSS_END();"
+    ],
+    "description": "MSS_BEGIN()/MSS_END()"
+  }
+}
+

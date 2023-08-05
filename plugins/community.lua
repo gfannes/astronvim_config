@@ -9,8 +9,9 @@ return {
         ["core.dirman"] = {
           config = {
             workspaces = {
+              notes = "",
               gubg = "~/gubg",
-              auro = "~/am",
+              auro = "~/decode-it/newauro",
               subsoil = "~/decode-it/subsoil",
             }
           }
@@ -33,4 +34,16 @@ return {
       disabled_filetypes = { "help" },
     },
   },
+
+  { import = "astrocommunity.bars-and-lines.lualine-nvim" },
+  {
+    "nvim-lualine/lualine.nvim",
+    opts = {
+      sections = {
+        lualine_c = {{"filename", path = 2}},
+      }
+    }
+  },
+
+  { import = "astrocommunity.motion.mini-surround"}
 }

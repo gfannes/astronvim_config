@@ -88,5 +88,8 @@ return {
       command = "silent! wall",
     })
 
+    vim.wo.relativenumber = false
+    vim.wo.wrap = true
+
   end,
 }

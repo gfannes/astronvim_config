@@ -17,12 +17,16 @@ local M = {
       require("orgmode").setup({
         org_agenda_files = { "~/decode-it/newauro/**/*" },
         -- org_default_notes_file = "~/org/refile.org",
-        org_todo_keywords = { "TODO(t)", "NEXT(n)", "WIP(w)", "BLOCKED(b)", "READY(r)", "|", "DONE(d)" },
+        org_todo_keywords = { "UNCLEAR(u)", "TODO(t)", "NEXT(n)", "ONGOING(o)", "REVIEW(r)", "VALIDATING(v)", "WAITING(w)", "BLOCKED(b)", "MAYBE(m)", "|", "FINISHED(f)" },
         org_todo_keyword_faces = {
+          UNCLEAR = ":background red",
           NEXT = ":foreground orange",
-          WIP = ":foreground purple",
+          ONGOING = ":foreground purple",
+          REVIEW = ":background purple",
+          VALIDATING = ":foreground blue",
+          WAITING = ":background grey",
           BLOCKED = ":background grey",
-          READY = ":foreground OliveDrab",
+          MAYBE = ":foreground grey",
         },
         org_capture_templates = {
           t = {

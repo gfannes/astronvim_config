@@ -17,13 +17,17 @@ local M = {
       require("orgmode").setup({
         org_agenda_files = { "~/decode-it/newauro/**/*" },
         -- org_default_notes_file = "~/org/refile.org",
-        org_todo_keywords = { "UNCLEAR(u)", "TODO(t)", "NEXT(n)", "ONGOING(o)", "REVIEW(r)", "VALIDATING(v)", "WAITING(w)", "BLOCKED(b)", "MAYBE(m)", "|", "FINISHED(f)" },
+        org_todo_keywords = { "INBOX(i)", "UNCLEAR(u)", "TODO(t)", "ACTIVE(a)", "ACTIVEX(x)", "NEXT(n)", "VALIDATION(v)", "REWORK(r)", "WAITING(w)", "BLOCKED(b)", "MAYBE(m)", "|", "DONE(d)" },
         org_todo_keyword_faces = {
+          INBOX = ":foreground yellow",
           UNCLEAR = ":background red",
           NEXT = ":foreground orange",
-          ONGOING = ":foreground purple",
-          REVIEW = ":background purple",
-          VALIDATING = ":foreground blue",
+
+          ACTIVE = ":foreground cyan",
+          ACTIVEX = ":foreground OliveDrab",
+          VALIDATION = ":foreground purple",
+          REWORK = ":background purple",
+
           WAITING = ":background grey",
           BLOCKED = ":background grey",
           MAYBE = ":foreground grey",
@@ -32,17 +36,17 @@ local M = {
           t = {
             description = "Todo",
             template = "* TODO %?\n%U",
-            target = "~/org/todo.org",
+            target = "~/decode-it/newauro/todo.org",
           },
           j = {
             description = "Journal",
             template = "\n*** %<%Y-%m-%d> %<%A>\n**** %U\n\n%?",
-            target = "~/org/journal.org",
+            target = "~/decode-it/journal.org",
           },
           n = {
             description = "Notes",
             template = "* %?\n %u",
-            target = "~/org/notes.org",
+            target = "~/decode-it/newauro/notes.org",
           },
         },
       })

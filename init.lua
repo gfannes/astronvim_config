@@ -91,5 +91,20 @@ return {
     vim.wo.relativenumber = false
     vim.wo.wrap = true
 
+    vim.opt.conceallevel = 2
+    vim.opt.concealcursor = 'nc'
+    vim.g.loaded_netrwPlugin = true -- Otherwise, orgmode refuses to open URLs
+
+    vim.api.nvim_create_autocmd("BufWinEnter", {
+      pattern = "*.org",
+      callback = function()
+        vim.wo.foldenable = false
+        vim.cmd("hi OrgTSCheckboxUnchecked guibg=Red") -- This does not work, apparently
+        vim.cmd("hi OrgTSCheckboxHalfChecked guibg=Red")
+        vim.cmd("hi OrgTSCheckboxChecked guifg=Green")
+        vim.cmd("hi OrgTSHeadlineLevel3 guifg=PaleGreen")
+      end,
+    })
+
   end,
 }

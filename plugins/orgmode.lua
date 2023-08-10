@@ -17,7 +17,7 @@ local M = {
       require("orgmode").setup({
         org_agenda_files = { "~/decode-it/newauro/**/*" },
         -- org_default_notes_file = "~/org/refile.org",
-        org_todo_keywords = { "INBOX(i)", "UNCLEAR(u)", "TODO(t)", "ACTIVE(a)", "ACTIVEX(x)", "NEXT(n)", "VALIDATION(v)", "REWORK(r)", "WAITING(w)", "BLOCKED(b)", "MAYBE(m)", "|", "DONE(d)" },
+        org_todo_keywords = { "INBOX(i)", "UNCLEAR(u)", "TODO(t)", "ACTIVE(a)", "ACTIVEX(x)", "NEXT(n)", "VALIDATION(v)", "REWORK(r)", "WAITING(w)", "BLOCKED(b)", "MAYBE(m)", "(-)", "|", "DONE(d)" },
         org_todo_keyword_faces = {
           INBOX = ":foreground yellow",
           UNCLEAR = ":background red",

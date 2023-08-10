@@ -32,7 +32,13 @@ local M = {
           BLOCKED = ":background grey",
           MAYBE = ":foreground grey",
         },
+        org_log_done = false,
         org_capture_templates = {
+          i = {
+            description = "Inbox",
+            template = "* INBOX %?\n%U",
+            target = "~/decode-it/newauro/inbox.org",
+          },
           t = {
             description = "Todo",
             template = "* TODO %?\n%U",
@@ -41,7 +47,7 @@ local M = {
           j = {
             description = "Journal",
             template = "\n*** %<%Y-%m-%d> %<%A>\n**** %U\n\n%?",
-            target = "~/decode-it/journal.org",
+            target = "~/decode-it/newauro/journal.org",
           },
           n = {
             description = "Notes",
@@ -49,6 +55,9 @@ local M = {
             target = "~/decode-it/newauro/notes.org",
           },
         },
+        org_priority_highest = "A",
+        org_priority_default = "C",
+        org_priority_lowest = "E",
       })
     end,
   }

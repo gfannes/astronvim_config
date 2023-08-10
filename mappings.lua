@@ -20,7 +20,9 @@ return {
     ["<leader>b"] = { name = "Buffers" },
     -- quick save
     -- ["<C-s>"] = { ":w!<cr>", desc = "Save File" },  -- change description but the same command
-    ["<leader>a"] = {":Format<cr>", desc = "Reformat"}
+    ["<leader>a"] = {":Format<cr>", desc = "Reformat"},
+    ["<localleader>b"] = { "o{<cr>}<esc>ko" },
+    ["<localleader>r"] = { "O#include <><esc>i" },
   },
   t = {
     -- setting a mapping to false will disable it
